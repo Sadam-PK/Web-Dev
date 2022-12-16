@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax in JS</title>
+</head>
+
+<body>
+    <button onclick="withOutReload()" id="loader">Data Load!</button>
+
+    <script>
+        let loader = document.getElementById('loader')
+
+        function withOutReload() {
+            const httpreq = new XMLHttpRequest();
+            httpreq.onreadystatechange = function () {
+
+                if (httpreq.readyState == 3) {
+                    loader.innerHTML='loading'
+                }
+                if (httpreq.readyState == 4) {
+                    loader.innerHTML='load data'
+                }
+            }
+            httpreq.open("GET","https://jsonplaceholder.typicode.com/posts")
+            httpreq.send()
+        }
+    </script>
+</body>
+
+</html>
