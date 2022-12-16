@@ -5,36 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="" method="POST">
-        <table cellpadding="5">
-            <caption>Login</caption>
-            <tr>
-                <td>
-                    <label for="username">Username</label>
-                </td>
+    <div class="form">
+        <table>
+            <caption>Login<caption>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username" required></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" required></td>
+                </tr>
 
-                <td>
-                    <input type="text" placeholder="Username" name="username">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="password">Password</label>
-                </td>
-
-                <td>
-                    <input type="text" placeholder="Password" name="password">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button>Login</button>
-                </td>
-            </tr>
-            
+                <tr>
+                    <td colspan="2"><input type="submit" value="Login"></td>
+                </tr>
         </table>
-    </form>
+    </div>
 </body>
 </html>
