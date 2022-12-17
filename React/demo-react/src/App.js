@@ -1,26 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import './components/functionalComponents'
 import FunctionalComponent from './components/functionalComponents';
-
+import Prop from './prop';
+import React,{useState} from 'react';
 function App() {
+  let [dataProp, setData] = useState('My Data')
   return (
     <div className="App">
       <header className="App-header">
+        <FunctionalComponent data={dataProp}></FunctionalComponent>
+        <Prop  data={[dataProp, setData]}></Prop>
 
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <FunctionalComponent></FunctionalComponent>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
